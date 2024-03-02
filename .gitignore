@@ -2,3 +2,4 @@
 conversion-json-to-parquet.py
 conversion-chunked-to-parquet.py
 inspect-parquet.py
+check-chunks.py
