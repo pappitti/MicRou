@@ -13,7 +13,7 @@ In many cases, the documents stem from a larger source that was broken down as p
 
 2. microu-chunked  
 
-As part of the RAG projet, we used an embeddings model, [Solon](https://huggingface.co/OrdalieTech/Solon-embeddings-large-0.1), with a context window of 512 tokens so we had to split the MicRou dataset into chunks. This is the resulting dataset.
+As part of the RAG projet, we used an embedding model, [Solon](https://huggingface.co/OrdalieTech/Solon-embeddings-large-0.1), with a context window of 512 tokens so we had to split the MicRou dataset into chunks. This is the resulting dataset.
 
 
 
@@ -29,7 +29,9 @@ The chunking strategy leveraged the existing sections of the documents as much a
 - if there is no list, the text is broken down into paragraphs and if paragraphs are still too large, they are further broken down into sentences. 
 - Finally, starting from the most granular level of each subsection (bottom-up), chunks are re-aggregated with an algorithm that looks for the minimal number of groups that can be formed with the chunks whilst respecting the constraints of the maximum tokens by chunks. Nothing too fancy : this is brute-force optimization.  
 
-The python script used for chunking is included in the chunking folder of this repository.  
+The python script used for chunking is included in the chunking folder of this repository.
+
+Datasets are also available on [HuggingFace](https://huggingface.co/PITTI)  
 
 ## License (CC-BY-NC-SA-4.0)  
 The dataset is currently under restrictive license. We plan to convert it to an open license once we have finalized the review of the right holders. Some documents may be excluded following the review, but we also plan to add others over time.
